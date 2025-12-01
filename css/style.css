@@ -114,7 +114,6 @@ body {
   font-family: 'Barlow';
   font-size: 1.125rem;
   color: var(--clr-grey-600);
-  background-color: var(--clr-blue-400);
 }
 
 h1, h2, h3 {
@@ -161,3 +160,34 @@ a {
 .nav-link:hover {
   background-color: hsla(0, 100%, 100%, 0.2);
 }
+
+/* BODY LINKS */
+.link {
+  display: inline-block;
+  font-family: 'Fraunces';
+  text-transform: uppercase;
+  font-size: .9rem;
+  color: var(--clr-grey-950);
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  background-color: var(--clr-underline, currentColor);
+  position: absolute;
+  top: .875rem;
+  bottom: -.03rem;
+  left: -.4rem;
+  right: -.4rem;
+  z-index: -1;
+  border-radius: 3rem;
+  transition: top .3s ease;
+}
+
+.link:hover::after {
+  top: -.03rem;
+}
+
+/* UTILITIES */
+.underline-red {--clr-underline: hsla(7, 99%, 70%, .6)}
+.underline-yellow { --clr-underline:  hsla(51, 100%, 49%, .6)}
