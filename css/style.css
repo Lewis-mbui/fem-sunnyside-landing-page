@@ -111,4 +111,39 @@ svg {
 
 body {
   font-family: 'Barlow';
+  font-size: 1.125rem;
+  color: var(--clr-grey-600);
+  text-align: center;
+  padding: 1rem;
 }
+
+h1, h2, h3 {
+  font-family: 'Fraunces';
+  line-height: 1.2;
+  font-weight: 900;
+}
+
+h1 {
+  color: var(--clr-grey-950);
+  font-size: 2.75rem;
+  text-transform: uppercase;
+  letter-spacing: .28rem;
+  font-weight: 900;
+}
+
+h2 {
+  color: var(--clr-grey-950);
+  font-size: 2.125rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 1.1875rem;
+  letter-spacing: .175rem;
+  color: var(--clr-grey-400);
+}
+
+a {
+  text-decoration: none;
+}
+
