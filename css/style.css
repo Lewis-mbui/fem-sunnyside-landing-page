@@ -1,3 +1,17 @@
+:root {
+  --clr-red-400: hsl(7, 99%, 70%);
+  --clr-yellow-500: hsl(51, 100%, 49%);
+  --clr-green-800: hsl(167, 40%, 24%);
+  --clr-blue-800: hsl(198, 62%, 26%);
+  --clr-green-500: hsl(167, 34%, 41%);
+
+  --clr-grey-950: hsl(212, 27%, 19%);
+  --clr-grey-600: hsl(213, 9%, 39%);
+  --clr-grey-550: hsl(232, 10%, 55%);
+  --clr-grey-400: hsl(210, 4%, 67%);
+  --clr-white: hsl(0, 100%, 100%);
+}
+
 /* RESET STYLES */
 /* Box sizing rules */
 *,
