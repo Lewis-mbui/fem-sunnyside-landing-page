@@ -188,6 +188,31 @@ a {
   top: -.03rem;
 }
 
+/* HEADER */
+.header {
+  background-color: var(--clr-blue-400);
+}
+
+.header__wrapper,
+.header__nav,
+.header__links {
+  display: flex;
+  align-items: center;
+}
+
+.header__wrapper {
+  justify-content: space-between;
+}
+
+.menu-icon {
+  display: none;
+}
+
+
+
 /* UTILITIES */
 .underline-red {--clr-underline: hsla(7, 99%, 70%, .6)}
 .underline-yellow { --clr-underline:  hsla(51, 100%, 49%, .6)}
+.wrapper {
+  padding-inline: 1.4rem;
+}
