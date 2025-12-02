@@ -212,25 +212,27 @@ a {
 }
 
 @media (max-width: 37.5em) {
-  .header__nav.toggled .header__links {
-    display: block;
-    max-height: 100vh;
-    opacity: 1;
+  .header__links {
     position: absolute;
+    display: block;
     top: 5rem;
-    left: 1.4rem;
-    right: 1.4rem;
+    left: 200%;
+    right: -100%;
+    max-height: 0;
+    opacity: 0;
     padding-top: 2rem;
     text-align: center;
     background-color: red;
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 100% 100%, 100% 0, 95% 14%, 0 14%);
-    transition: all .3s ease;
+    transition: all .8s ease;
   }
 
-  .header__links {
-    max-height: 0;
-    opacity: 0;
-    display: none;
+  .header__nav.toggled .header__links {
+    left: 1.4rem;
+    right: 1.4rem;
+    max-height: 100vh;
+    opacity: 1;
+    transition: all .5s ease;
   }
 
   .menu-icon {
