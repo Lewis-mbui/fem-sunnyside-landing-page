@@ -191,6 +191,7 @@ a {
 /* HEADER */
 .header {
   background-color: var(--clr-blue-400);
+  padding-block: 2.5rem;
 }
 
 .header__wrapper,
@@ -204,8 +205,37 @@ a {
   justify-content: space-between;
 }
 
-.menu-icon {
+.menu-icon,
+.overlay {
   display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 37.5em) {
+  .header__nav.toggled .header__links {
+    display: block;
+    max-height: 100vh;
+    opacity: 1;
+    position: absolute;
+    top: 5rem;
+    left: 1.4rem;
+    right: 1.4rem;
+    padding-top: 2rem;
+    text-align: center;
+    background-color: red;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 100% 100%, 100% 0, 95% 14%, 0 14%);
+    transition: all .3s ease;
+  }
+
+  .header__links {
+    max-height: 0;
+    opacity: 0;
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
 }
 
 
@@ -216,3 +246,5 @@ a {
 .wrapper {
   padding-inline: 1.4rem;
 }
+
+/* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 100% 100%, 100% 0, 88% 14%, 0 14%); */
