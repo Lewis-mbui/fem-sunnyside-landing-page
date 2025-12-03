@@ -124,7 +124,6 @@ h1, h2, h3 {
 }
 
 h1 {
-  color: var(--clr-grey-950);
   font-size: 2.75rem;
   text-transform: uppercase;
   letter-spacing: .28rem;
@@ -192,7 +191,7 @@ a {
 /* HEADER */
 .header {
   background-color: var(--clr-blue-400);
-  padding-block: 2.5rem;
+  padding-top: 1.6rem;
 }
 
 .header__wrapper,
@@ -212,9 +211,10 @@ a {
   cursor: pointer;
 }
 
-@media (max-width: 37.5em) {
+@media (max-width: 36.25em) {
   .header__links {
     position: absolute;
+    z-index: 1;
     display: block;
     top: 5rem;
     left: 1.4rem;
@@ -223,16 +223,27 @@ a {
     padding: 0;
     opacity: 0;
     text-align: center;
-    background-color: red;
+    background-color: var(--clr-white);
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 100% 100%, 100% 0, 95% 14%, 0 14%);
     transition: all .3s ease;
   }
 
   .header__nav.toggled .header__links {
-    padding-top: 2rem;
+    padding-top: 2.4rem;
+    padding-bottom: 1rem;
     max-height: 100vh;
     opacity: 1;
     transition: all .5s ease;
+  }
+
+  .header__nav.toggled .nav-link {
+    background-color: hsla(51, 100%, 49%, 0);
+    color: var(--clr-grey-550);
+  }
+
+  .header__nav.toggled .nav-link:hover {
+    background-color: hsla(51, 100%, 49%, .4);
+    color: var(--clr-grey-950);
   }
 
   .menu-icon {
@@ -240,7 +251,41 @@ a {
   }
 }
 
+/* HERO */
+.hero {
+  padding-block: 5rem 20rem;
+  text-align: center;
+  background-color: var(--clr-blue-400);
+  color: var(--clr-white);
+  background-image: url(/assets/images/icon-arrow-down.svg),
+    url(/assets/images/mobile/image-header.jpg);
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  background-position: center top 32vh, bottom center;
+}
 
+.hero__title {
+  font-size: clamp(
+    1.5rem, 
+    -0.27419354838709675rem + 12.903225806451612vw, 
+    2.75rem
+  );
+  max-width: 12ch;
+  margin-inline: auto;
+  padding-inline: 1.4rem;
+}
+
+@media (min-width: 37.5em) {
+  .hero {
+    background-image: url(/assets/images/icon-arrow-down.svg),
+    url(/assets/images/desktop/image-header.jpg);
+    background-position: center top 20vh, center;
+  }
+
+  .hero__title {
+    max-width: none;
+  }
+}
 
 /* UTILITIES */
 .underline-red {--clr-underline: hsla(7, 99%, 70%, .6)}
@@ -248,5 +293,3 @@ a {
 .wrapper {
   padding-inline: 1.4rem;
 }
-
-/* clip-path: polygon(0 100%, 100% 100%, 100% 100%, 100% 100%, 100% 0, 88% 14%, 0 14%); */
