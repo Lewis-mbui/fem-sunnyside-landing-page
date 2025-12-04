@@ -440,6 +440,9 @@ a {
   }
 }
 
+/* FOOTER */
+
+
 /* UTILITIES */
 .underline-red {--clr-underline: hsla(7, 99%, 70%, .6)}
 .underline-yellow { --clr-underline:  hsla(51, 100%, 49%, .6)}
