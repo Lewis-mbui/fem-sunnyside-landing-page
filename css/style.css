@@ -275,7 +275,7 @@ a {
     url(/assets/images/mobile/image-header.jpg);
   background-repeat: no-repeat;
   background-size: auto, cover;
-  background-position: center top 32vh, bottom center;
+  background-position: center top 16rem, bottom center;
 }
 
 .hero__title {
@@ -293,7 +293,7 @@ a {
   .hero {
     background-image: url(/assets/images/icon-arrow-down.svg),
     url(/assets/images/desktop/image-header.jpg);
-    background-position: center top 20vh, center;
+    background-position: center top 10rem, center;
   }
 
   .hero__title {
