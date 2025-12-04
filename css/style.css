@@ -116,6 +116,7 @@ body {
   font-family: 'Barlow';
   font-size: 1.125rem;
   color: var(--clr-grey-600);
+  position: relative;
 }
 
 h1, h2, h3 {
@@ -212,10 +213,15 @@ a {
   cursor: pointer;
 }
 
+.menu-icon {
+  position: relative;
+  z-index: 2;
+}
+
 @media (max-width: 36.25em) {
   .header__links {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     display: block;
     top: 5rem;
     left: 1.4rem;
@@ -235,6 +241,13 @@ a {
     max-height: 100vh;
     opacity: 1;
     transition: all .5s ease;
+  }
+
+  .header__nav.toggled .overlay {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    inset: 0;
   }
 
   .header__nav.toggled .nav-link {
